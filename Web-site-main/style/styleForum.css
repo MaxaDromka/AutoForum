@@ -27,7 +27,7 @@ nav ul li {
 }
 nav ul li::before{
     content: '';
-    position: absolute;
+    position: relative;
     left: 0;
     top:0;
     bottom: 0;
