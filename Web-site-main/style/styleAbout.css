@@ -41,12 +41,19 @@ header {
 
   }
   nav ul li a {
+    /* color: #fff;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500; */
     color: #fff;
     display: block;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
+    transition: color 0.3s;
   }
 
 
@@ -57,17 +64,20 @@ header {
 }
 
 h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
 p {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 
 .section {
-    margin-bottom: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 nav a {
   text-decoration: none;
@@ -77,3 +87,12 @@ nav a {
 nav a:hover {
   color: #ff9900;
 }
+nav ul li a:hover {
+  color: #ff9900;
+}
+
+
+
+
+
+
