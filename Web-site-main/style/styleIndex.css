@@ -12,14 +12,41 @@ header {
 }
 
 nav ul {
-  list-style: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-nav li {
+nav ul li {
   display: inline;
-  margin-right: 20px;
+  margin-right: 10px;
+  position: relative;
+  background-color: black;
+  border-radius: 2px;
+  overflow: hidden;
+}
+nav ul li::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top:0;
+    bottom: 0;
+    width: 5px;
+    background-color: rgb(225, 143, 21);
+    transition: 0.3s all ease-in-out;
+}
+nav li:hover::before{
+  border-radius: 0 50px 50px 0;
+  width: 110%;
+
+}
+nav ul li a {
+  color: #fff;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 nav a {
