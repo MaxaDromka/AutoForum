@@ -27,6 +27,11 @@
                 Режим простоя на заводе Hyundai Motor в Сестрорецке (Санкт-Петербург) продлили до 30 ноября, сообщает ТАСС со ссылкой на информацию регионального Центра занятости населения. Простой затрагивает 534 сотрудников предприятия, то есть примерно половину штатной численности.
                 В конце сентября глава Минпромторга РФ Денис Мантуров заявлял, что в ближайшее время Hyundai Motor продаст свой завод в Сестрорецке некоей российской компании. 
                 Завод Hyundai Motor Manufacturing Rus прежде по полному циклу производил автомобили Hyundai Solaris, Hyundai Creta, Kia Rio, Kia Rio X. В настоящее время на нем действует только производство кузовов — их делают для Казахстана, где собирают в готовые машины для местного рынка.
+                <div class="reaction-icons">
+                  <button class="like-button" onclick="handleLikeClick()">
+                      <img src="/Web-site-main/image/free-icon-like-686308.png" alt="Like">
+                  </button>
+              </div>
               </div>
             </div>
           </div>
@@ -64,5 +69,37 @@
         </div>
       </section>
     </main>
+
+    <script>
+      // Функция для переключения видимости навигационного меню
+      function toggleNav() {
+        var nav = document.querySelector('nav ul');
+        nav.classList.toggle('show');
+      }
+      
+      function handleLikeClick() {
+        var likeButton = document.querySelector('.like-button');
+        likeButton.classList.toggle('clicked');
+    }
+      
+      // Добавим обработчики событий для раскрытия новостных заголовков
+      var newsPanels = document.querySelectorAll('.masonry-layout__panel');
+      newsPanels.forEach(panel => {
+        panel.addEventListener('click', function () {
+          this.classList.toggle('expanded');
+        });
+      });
+      
+      // Добавим обработчики событий для раскрытия новостных заголовков при наведении мыши
+      newsPanels.forEach(panel => {
+        panel.addEventListener('mouseover', function () {
+          this.classList.add('expanded');
+        });
+        panel.addEventListener('mouseout', function () {
+          this.classList.remove('expanded');
+        });
+      });
+      </script>
+
 </body>
 </html>

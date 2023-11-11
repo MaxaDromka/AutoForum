@@ -92,7 +92,8 @@ h1, h2 {
 }
 
 .masonry-layout__panel:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }
 
 .news-content {
@@ -158,4 +159,26 @@ h1{
 h2{
   position: relative;
   text-align: center;
+}
+
+.reaction-icons {
+  /* Добавьте следующие стили для кнопки лайка */
+  .like-button {
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s ease, background-color 0.3s ease; /* Добавлены анимации изменения размера и цвета */
+  }
+
+  .like-button:hover {
+      transform: scale(1.1); /* Увеличиваем размер при наведении */
+  }
+
+  .like-button.clicked {
+      background-color: #9dff52; /* Цвет кнопки при нажатии */
+      transform: scale(0.9); /* Уменьшаем размер при нажатии */
+  }
 }
